@@ -1,0 +1,12 @@
+---
+# Configures apache server to work with PHP
+
+- name: install php apache module
+  apt: update_cache=yes cache_valid_time=3600 pkg={{ item }} state=present # won't update if done under an hour ago
+  with_items:
+    - libapache2-mod-php5
+
+- name: enable mcrypt module
+  file: src=/etc/php5/mods-available/mcrypt.ini dest=/etc/php5/apache2/conf.d/mcrypt.ini owner=root group=root state=link
+
+- include: configure-php-ini-apache.yml

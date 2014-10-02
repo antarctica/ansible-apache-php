@@ -1,0 +1,18 @@
+---
+# Default variables - inventory or playbook overrides will be respected
+
+# Reminder:
+# Otions from 'php_all_ini_default_options' and 'php_all_ini_user_options' will also be used by this role
+# These variables are set in roles/php/defaults/main.yml
+
+php_apache_ini_default_options:
+  - section: "Error handling and logging"
+    options:
+      - option: display_errors
+        value: Off
+  - section: "PHP"
+    options:
+      - option: expose_php
+        value: Off
+
+php_apache_ini_user_options: []
