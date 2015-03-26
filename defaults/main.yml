@@ -10,9 +10,5 @@ php_apache_ini_default_options:
     options:
       - option: display_errors
         value: "Off"
-  - section: "PHP"
-    options:
-      - option: expose_php
-        value: "Off"
 
 php_apache_ini_user_options: []
