@@ -7,8 +7,9 @@ Installs the PHP module for Apache
 ## Overview
 
 * Installs Apache-PHP module package
-* Explicitly enables the `mcrypt` module (others are auto-enabled) for the apache environment
-* Configures the `php.ini` file for the Apache interface.
+* Installs PHP Apache module
+* Explicitly enables the `mcrypt` module (others are auto-enabled) for the Apache SAPI
+* Configures the `php.ini` file for the Apache SAPI.
 
 ## Availability
 
@@ -25,27 +26,26 @@ This role is designed for internal use but if useful can be shared publicly.
 
 ### Variables
 
-#### PHP interface `.ini` configuration (CLI, apache, etc.)
 
 ##### Overview
 
-See this section in the `php` role for an overview of how PHP `.ini` files are managed.
+This role essentially adds an additional SAPI.
 
-This role essentially adds an additional interface.
 
 Note: In addition to the variables listed below two variables from the main PHP role are used by tasks in this role, these are:
+See this section in the `php` role for an overview of how PHP SAPI `.ini` files are managed.
 
 ##### All interfaces
 
 See this section in the `php` role for details of what these do.
 
-##### Apache interface `apache2/php.ini`
+##### Apache SAPI `apache2/php.ini`
 
 See [here](http://php.net/manual/en/ini.php) for documentation.
 
 * `php_apache_ini_default_options`
-    * Default values for the Apache PHP implementation.
     * **Do not override this variable**, use `php_apache_ini_user_options` instead.
+    * Default values for the Apache PHP SAPI.
     * Structured as an array of items where each item consists of a section name string and array of options and values
         * `section`  
             * Name of section in ini file (e.g. "Error handling and logging")
