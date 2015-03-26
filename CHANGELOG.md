@@ -1,5 +1,9 @@
 # Apache PHP (`apache-php`) - Changelog
 
+## 0.2.6 - March 2015
+
+* Correcting variable conversion
+
 ## 0.2.5 - December 2014
 
 * Preparing role for public release

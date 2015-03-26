@@ -9,10 +9,10 @@ php_apache_ini_default_options:
   - section: "Error handling and logging"
     options:
       - option: display_errors
-        value: Off
+        value: "Off"
   - section: "PHP"
     options:
       - option: expose_php
-        value: Off
+        value: "Off"
 
 php_apache_ini_user_options: []
