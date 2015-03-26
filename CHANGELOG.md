@@ -1,5 +1,9 @@
 # Apache PHP (`apache-php`) - Changelog
 
+## 0.2.7 - March 2015
+
+* Removing duplicate config option defined in upstream role
+
 ## 0.2.6 - March 2015
 
 * Correcting variable conversion
